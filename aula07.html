@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>    
+    <script src='main.js'></script>
+    <script>
+        const lerNome = () => {
+            let nome = document.getElementById('nome').value;
+
+           // document.getElementById('resultado').textContent = nome;
+            console.log(nome);
+
+            if(nome == ''){
+                alert('É obrigatório o preenchiemtno do nome');
+            }
+
+            document.querySelector('p').textContent = nome;
+
+            let elementos = document.querySelectorAll('p');
+
+            // for(i = 0; i < elementos.length; i++) {
+            //     elementos[i].textContent = nome;
+            // }
+
+            elementos.forEach(function(elemento) {
+	            elemento.textContent = nome;
+            });
+
+            document.body.style.backgroundColor = 'lightblue';
+
+
+        }
+    </script>
+</head>
+<body>
+    
+    <form id="formulario" method="get" action="#">
+        <input id="nome" type="text" name="nome"/>
+        <input type="submit" value="Ler o nome" />
+    </form>
+    
+    <script>
+        document.getElementById('formulario').addEventListener("submit", (e) => { 
+            lerNome();
+            e.preventDefault();
+        });
+    </script>
+
+
+    <p id="resultado">
+
+    </p>
+
+    <p>
+
+    </p>
+
+    <p>
+
+    </p>
+
+    <input type="button" value="Clicar" onclick="constArrow(1,2)"/>
+</body>
+</html>

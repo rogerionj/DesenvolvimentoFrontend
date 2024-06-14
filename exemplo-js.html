@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>    
+
+<script>
+
+function mostrarOla(){    
+    let text = "Olá<br/>";
+    for(i = 0; i < 10; i++){
+        text += "Olá<br/>";
+    }
+    document.write(text);
+}
+
+const arrowFunctionTeste = () => {
+    let text = "Olá<br/>";
+    for(i = 0; i < 10; i++){
+        text += "Olá<br/>";
+    }
+    document.write(text);
+}
+
+</script>    
+</head>
+<body>
+
+    <h1>Olá Mundo!</h1>
+    
+    <input type="button" value="Clicar" onclick="arrowFunctionTeste()"/>
+    
+</body>
+</html>
