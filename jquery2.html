@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <h1>Cadastro de Produto</h1>
+    <form id="produto">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome"/>
+            <span id="erroNome" style="color: red"></span>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('#produto').submit(function(event) {
+                event.preventDefault();
+
+                $('#erroNome').text('');
+
+                var nome = $('#nome').val();
+                if(nome == ''){
+                    $('#erroNome').text('O nome do produto é obrigatório');
+                }
+            })
+        });
+    </script>
+</body>
+</html>
